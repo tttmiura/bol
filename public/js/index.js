@@ -6,13 +6,6 @@ $(function() {
 
 // init video frame
 if(VIDEO) {
-	console.log(VIDEO);
-	if(VIDEO.parameters && VIDEO.parameters.apiKey && VIDEO.parameters.clientId) {
-		gapi.load('client', function() {
-			VIDEO.initClient();
-		});
-	}
-
 	if(VIDEO.videos) {
 		$.each(VIDEO.videos, function(i, video) {
 			var section = $('<section id="sectionHistory' + i + '"></section>');
