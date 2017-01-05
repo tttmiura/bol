@@ -2,6 +2,45 @@
  * index.js
  */
 'use strict';
+$(function() {
+
+// init video frame
+if(VIDEO) {
+	console.log(VIDEO);
+	if(VIDEO.parameters && VIDEO.parameters.apiKey && VIDEO.parameters.clientId) {
+		gapi.load('client', function() {
+			VIDEO.initClient();
+		});
+	}
+
+	if(VIDEO.videos) {
+		$.each(VIDEO.videos, function(i, video) {
+			var section = $('<section id="sectionHistory' + i + '"></section>');
+			var title = $('<h3></h3>');
+			title.text(video.title);
+			section.append(title);
+
+			var frame = $('<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' + video.id + '?rel=0" frameborder="0" allowfullscreen></iframe>');
+			section.append(frame);
+
+			$('#sectionHistory').append(section);
+		});
+	}
+
+	// TODO
+	if(VIDEO.idList) {
+		$.each(VIDEO.idList, function(i, id) {
+			var section = $('<section id="sectionHistoryDummy' + i + '"></section>');
+
+			var frame = $('<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' + id + '?rel=0" frameborder="0" allowfullscreen></iframe>');
+			section.append(frame);
+
+			$('#sectionHistoryDummy').append(section);
+		});
+	}
+}
+
+// init slides
 Reveal.initialize({
 	keyboard: {
 		13: 'next', // Enter
@@ -30,3 +69,4 @@ Reveal.initialize({
 	]
 });
 
+});
