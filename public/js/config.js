@@ -2,25 +2,6 @@
  * config.js
  */
 var VIDEO = {
-	idList : [
-	          '48dJo93Crzo',
-	          'WgKbfxwVuXE',
-	          'Z9kh6NiKGBk',
-	          'uTWPxRFLEnE',
-	          'FdZ4PMr3NeI',
-	          '52FaDwhcYbU',
-	          '2dKItG7f6k8',
-	          'x89tEP8917Y',
-	          'pwFmvWxtHp8',
-	          'xNybMwJ_MFI',
-	          'XWMvtRmRowI',
-	          '9hcVu7lhm3w',
-	          'obZdbV75yEE',
-	          'b1RNcorUgNU',
-	          'pfxtT0qoYaU',
-	          'JahfhQjIG7Q',
-	          '3pqAMkt8Oek',
-	          'F97MWZYS7y4'],
 	videos : [
 		{
 			id : 'kXvz6EQInc8',
@@ -32,14 +13,29 @@ var VIDEO = {
 			id : 'iHIblDnJDUY',
 			title : 'HANA氏 その３'
 		},{
-			id : 'GhAyfmGlPcI',
-			title : 'ちょるる その１'
+			id : '48dJo93Crzo',
+			title : 'HANA氏 その４'
+		},{
+			id : 'uTWPxRFLEnE',
+			title : 'HANA氏 その５'
 		},{
 			id : '6P4gSQWHfhI',
 			title : 'ほーりー その１'
 		},{
 			id : 'oeZMmVCGBPU',
 			title : 'ほーりー その２'
+		},{
+			id : 'WgKbfxwVuXE',
+			title : 'ほーりー その３'
+		},{
+			id : 'FdZ4PMr3NeI',
+			title : 'ほーりー その４'
+		},{
+			id : 'Z9kh6NiKGBk',
+			title : 'NAKA その１'
+		},{
+			id : 'GhAyfmGlPcI',
+			title : 'ちょるる その１'
 		},{
 			id : 'g_rCjCbI9PM',
 			title : 'ちょるる その２'

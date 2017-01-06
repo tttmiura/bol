@@ -19,18 +19,6 @@ if(VIDEO) {
 			$('#sectionHistory').append(section);
 		});
 	}
-
-	// TODO
-	if(VIDEO.idList) {
-		$.each(VIDEO.idList, function(i, id) {
-			var section = $('<section id="sectionHistoryDummy' + i + '"></section>');
-
-			var frame = $('<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' + id + '?rel=0" frameborder="0" allowfullscreen></iframe>');
-			section.append(frame);
-
-			$('#sectionHistoryDummy').append(section);
-		});
-	}
 }
 
 // init slides
