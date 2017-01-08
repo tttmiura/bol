@@ -4,12 +4,6 @@
 'use strict';
 $(function() {
 
-// init video frame
-
-if(VIDEO) {
-	VIDEO.initVideoFrame();
-}
-
 // init slides
 Reveal.initialize({
 	keyboard: {
@@ -20,7 +14,13 @@ Reveal.initialize({
 		85: 'up', // u
 		86: function () {
 			$('.viewArea').toggle('slow');
-		} // v
+		}, // v
+		89: function () {
+			// init video frame
+			if(VIDEO) {
+				VIDEO.initVideoFrame();
+			}
+		} // y
 	},
 	controls: true,
 	progress: true,
