@@ -5,20 +5,9 @@
 $(function() {
 
 // init video frame
+
 if(VIDEO) {
-	if(VIDEO.videos) {
-		$.each(VIDEO.videos, function(i, video) {
-			var section = $('<section id="sectionHistory' + i + '"></section>');
-			var title = $('<h3></h3>');
-			title.text(video.title);
-			section.append(title);
-
-			var frame = $('<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' + video.id + '?rel=0" frameborder="0" allowfullscreen></iframe>');
-			section.append(frame);
-
-			$('#sectionHistory').append(section);
-		});
-	}
+	VIDEO.initVideoFrame();
 }
 
 // init slides
@@ -28,7 +17,10 @@ Reveal.initialize({
 		68: 'down', // d
 		78: 'next', // n
 		80: 'prev', // p
-		85: 'up' // u
+		85: 'up', // u
+		86: function () {
+			$('.viewArea').toggle('slow');
+		} // v
 	},
 	controls: true,
 	progress: true,

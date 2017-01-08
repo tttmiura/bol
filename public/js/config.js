@@ -43,6 +43,21 @@ var VIDEO = {
 			id : 'zR4TOBOVmxA',
 			title : 'ちょるる その３'
 		}
-	]
+	],
+	initVideoFrame : function() {
+		if(VIDEO.videos) {
+			$.each(VIDEO.videos, function(i, video) {
+				var section = $('<section id="sectionHistory' + i + '"></section>');
+				var title = $('<h3></h3>');
+				title.text(video.title);
+				section.append(title);
+
+				var frame = $('<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' + video.id + '?rel=0" frameborder="0" allowfullscreen></iframe>');
+				section.append(frame);
+
+				$('#sectionHistory').append(section);
+			});
+		}
+	}
 };
 
